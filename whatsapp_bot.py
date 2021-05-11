@@ -33,8 +33,9 @@ def send_message(numero, msg):
     send_button = driver.find_element_by_xpath(SEND_BUTTON)
     send_button.click()
     sleep(3)
-    
-df = pd.read_excel('lista_contatos_bot_wpp.xlsx')
+
+#coloque o caminho do arquivo da seguinte forma (exemplo de caminho): pd.read_excel(r'C:\Users\usuario\Desktop\pasta\lista_contatos_bot_wpp.xlsx')
+df = pd.read_excel('lista_contatos_bot_wpp.xlsx') 
 numeros = df['Telefone'].values.tolist()
 nomes = df['Nome'].values.tolist()
 #defina abaixo a mensagem que quer enviar
